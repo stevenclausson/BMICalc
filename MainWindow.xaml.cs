@@ -20,9 +20,25 @@ namespace BMI_Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string heightInput;
+        public string weightInput;
+        public float totalBmi;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void calculateButton_Click(object sender, RoutedEventArgs e)
+        {
+            heightInput = heightText.Text;
+            weightInput = weightText.Text;
+
+            float height = float.Parse(heightInput);
+            float weight = float.Parse(weightInput);
+            
+            totalBmi = (weight / (height * height)) * 703;
+            bmiLabel.Content = totalBmi;
+
         }
     }
 }
