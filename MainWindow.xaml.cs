@@ -32,9 +32,25 @@ namespace BMI_Calculator
         {
             heightInput = heightText.Text;
             weightInput = weightText.Text;
+            float height;
+            float weight;
 
-            float height = float.Parse(heightInput);
-            float weight = float.Parse(weightInput);
+            //check if numbers are input.
+            if (!float.TryParse(heightText.Text, out height))
+            {
+                MessageBox.Show("Height needs to be a number only.");
+                return;
+            }
+            if (!float.TryParse(weightText.Text, out weight))
+            {
+                MessageBox.Show("Weights needs to be a number only.");
+                return;
+            }
+
+
+
+            height = float.Parse(heightInput);
+            weight = float.Parse(weightInput);
 
             if (americanRadio.IsChecked == true)
             {
