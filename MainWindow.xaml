@@ -7,11 +7,16 @@
         mc:Ignorable="d"
         Title="BMI Calculator" Height="450" Width="800">
     <Grid>
-        <Button x:Name="calculateButton" Content="Calculate BMI" HorizontalAlignment="Left" Margin="62,194,0,0" VerticalAlignment="Top" Width="74" Click="calculateButton_Click"/>
-        <TextBox x:Name="heightText" HorizontalAlignment="Left" Height="23" Margin="37,40,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="weightText" HorizontalAlignment="Left" Height="23" Margin="91,86,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="calculateButton" Content="Calculate BMI" HorizontalAlignment="Left" Margin="332,146,0,0" VerticalAlignment="Top" Width="74" Click="calculateButton_Click"/>
+        <TextBox x:Name="heightText" HorizontalAlignment="Left" Height="23" Margin="245,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="weightText" HorizontalAlignment="Left" Height="23" Margin="245,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="bmiLabel" Content="Your BMI is: " HorizontalAlignment="Left" Margin="223,188,0,0" VerticalAlignment="Top"/>
         <Label x:Name="showBMI" Content="" HorizontalAlignment="Left" Margin="332,188,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label x:Name="label1" Content="Height" HorizontalAlignment="Left" Margin="184,40,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Weight" HorizontalAlignment="Left" Margin="184,83,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="americanRadio" Content="Inches/Pounds" HorizontalAlignment="Left" Margin="431,40,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="metricRadio" Content="Meters/Kg" HorizontalAlignment="Left" Margin="431,83,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <Label x:Name="labelText" Content="" HorizontalAlignment="Left" Margin="143,279,0,0" VerticalAlignment="Top" Height="87" Width="351"/>
 
     </Grid>
 </Window>

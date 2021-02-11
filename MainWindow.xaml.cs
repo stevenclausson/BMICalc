@@ -35,9 +35,47 @@ namespace BMI_Calculator
 
             float height = float.Parse(heightInput);
             float weight = float.Parse(weightInput);
+
+            if (americanRadio.IsChecked == true)
+            {
+                totalBmi = (weight / (height * height)) * 703;
+                bmiLabel.Content = totalBmi.ToString("0.00");
+            }
+            else
+            {
+                totalBmi = (weight / (height * height));
+                bmiLabel.Content = totalBmi.ToString("0.00");
+            }
             
-            totalBmi = (weight / (height * height)) * 703;
-            bmiLabel.Content = totalBmi;
+
+            if (totalBmi <= 16)
+            {
+                labelText.Content = "Your BMI suggests you may be severely underweight!";
+            }
+            else if (totalBmi >= 16.1 && totalBmi <= 18.4)
+            {
+                labelText.Content = "Your BMI suggests you may be underweight.";
+            }
+            else if (totalBmi >=18.5 && totalBmi <= 24.9)
+            {
+                labelText.Content = "Your BMI suggests you are at a healthy and normal weight.";
+            }
+            else if (totalBmi >= 25 && totalBmi <= 29.9)
+            {
+                labelText.Content = "Your BMI suggests you are overweight.";
+            }
+            else if (totalBmi >= 30 && totalBmi <= 34.9)
+            {
+                labelText.Content = "Your BMI suggests you are moderetely overweight.";
+            }
+            else if (totalBmi >= 35 && totalBmi <= 39.9)
+            {
+                labelText.Content = "Your BMI suggests you are obese!";
+            }
+            else if (totalBmi >= 40)
+            {
+                labelText.Content = "Your BMI suggests you are morbidly obese!";
+            }
 
         }
     }
